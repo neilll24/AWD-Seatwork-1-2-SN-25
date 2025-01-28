@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cars</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../assets/img/carlogo.png" alt="Car Rental Logo">
+        </div>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="./index.html">Cars</a>
+            <a href="../contact page/index.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="car-list">
+            <h2>Available Cars</h2>
+            <div class="carousel-container">
+                <button id="prev" class="carousel-button">&#10094;</button>
+                <div class="car-container" id="car-container">
+                    <!-- Carousel of Cars -->
+                    <div class="car-card">
+                        <img src="./assets/img/corolla.png" alt="Toyota Corolla">
+                        <h3>Toyota Corolla</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="./assets/img/civic.png" alt="Honda Civic">
+                        <h3>Honda Civic</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                    <div class="car-card unavailable">
+                        <img src="./assets/img/mustang.png" alt="Ford Mustang">
+                        <h3>Ford Mustang</h3>
+                        <button class="rent-button" disabled>Unavailable</button>
+                    </div>
+                    <div class="car-card unavailable">
+                        <img src="./assets/img/malibu.png" alt="Chevrolet Malibu">
+                        <h3>Chevrolet Malibu</h3>
+                        <button class="rent-button" disabled>Unavailable</button>
+                    </div>
+                    <div class="car-card unavailable">
+                        <img src="./assets/img/altima.png" alt="Nissan Altima">
+                        <h3>Nissan Altima</h3>
+                        <button class="rent-button" disabled>Unavailable</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="./assets/img/bmw.png" alt="BMW">
+                        <h3>BMW</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="./assets/img/mercedes.png" alt="Mercedes">
+                        <h3>Mercedes</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="./assets/img/optima.png" alt="Kia Optima">
+                        <h3>Kia Optima</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="./assets/img/sonata.png" alt="Hyundai Sonata">
+                        <h3>Hyundai Sonata</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="./assets/img/audi.png" alt="Audi">
+                        <h3>Audi</h3>
+                        <button class="rent-button">Rent Now</button>
+                    </div>
+                </div>
+                <button id="next" class="carousel-button">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Car Rental System. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../about us page/index.html">About Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
