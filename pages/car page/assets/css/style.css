@@ -1,0 +1,232 @@
+/* --- General Styling --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+html, body {
+    height: 100%; /* Ensure the body and html take up full height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack the header, main, and footer vertically */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/carpagebg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    animation: fadeIn 1s ease-in-out; /* Animation for page load */
+}
+
+main {
+    flex-grow: 1; /* Take up the remaining space */
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+header .logo img {
+    height: 75px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 20px;
+    position: relative;
+    border-radius: 8px;
+}
+
+/* --- Main Content Section --- */
+.car-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Take full height */
+    text-align: center;
+    animation: slideInUp 1s ease-out; /* Slide in animation for car list */
+}
+
+/* Animation for the Car List Title */
+.car-list h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out; /* Fade in with an upward motion */
+}
+
+/* Hover Effect on Available Cars Text */
+.car-list h2:hover {
+    color: #ff6f61; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+    letter-spacing: 2px; /* Add space between letters */
+}
+
+/* --- Car Cards Section --- */
+.car-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; /* Ensure carousel takes up full width */
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the arrows */
+    z-index: 10;
+    border-radius: 50%;
+    animation: fadeIn 1s ease-in-out; /* Fade in animation for carousel buttons */
+}
+
+/* Position Left Arrow at the far left of the page */
+#prev {
+    left: 0; /* Align it to the left edge of the website */
+    margin-left: 20px; /* Optional: give it some space from the very edge */
+}
+
+/* Position Right Arrow at the far right of the page */
+#next {
+    right: 0; /* Align it to the right edge of the website */
+    margin-right: 20px; /* Optional: give it some space from the very edge */
+}
+
+/* Hover Effect for Carousel Buttons */
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Car Card Styling */
+.car-card {
+    min-width: 300px;
+    height: 400px;
+    display: none; /* Hide all car cards initially */
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.6s ease;
+    animation: fadeInUp 1s ease-out; /* Animation for car cards */
+}
+
+.car-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Rent Button Styling */
+.rent-button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    animation: bounceIn 1s ease-out; /* Bounce in animation for rent button */
+}
+
+.rent-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Footer Links */
+.footer-links a:hover {
+    color: #ff6f61;
+    transform: scale(1.1); /* Slight text scaling */
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}

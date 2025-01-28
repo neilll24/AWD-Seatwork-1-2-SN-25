@@ -1,0 +1,255 @@
+/* --- General Styling --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* Background Image for the entire page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('../img/contact\ bg.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+    position: relative; /* Ensures the overlay is positioned correctly */
+    animation: fadeIn 1.5s ease-in-out; /* Animation for the body */
+}
+
+/* Add the semi-transparent white overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* White with low opacity */
+    z-index: -1; /* Ensures the overlay is behind the content */
+}
+
+/* --- Header Section --- */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+    height: 75px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 20px;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect on Navigation Links */
+nav a:hover {
+    color: #fff;
+    background: #ff6f61;
+    transform: translateY(-4px); /* Lifting effect */
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.4); /* Soft shadow */
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: #ffffff00;
+    padding: 50px 20px;
+    text-align: center;
+    animation: slideUp 1s ease-out; /* Animation for the contact section */
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out; /* Animation for heading */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out; /* Animation for form */
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: buttonHover 1s ease-out; /* Animation for button */
+}
+
+.contact-form button:hover {
+    background-color: #ff4e40;
+}
+
+/* --- Scroll to Top Button --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in-out; /* Animation for scroll to top button */
+}
+
+.scroll-to-top:hover {
+    background-color: #ff4e40;
+}
+
+/* --- Footer Section --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    margin-top: auto; /* This ensures the footer stays at the bottom */
+}
+
+footer:hover {
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #ff6f61;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Footer Links */
+.footer-links a:hover {
+    color: #ff6f61;
+    transform: scale(1.1); /* Slight text scaling */
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonHover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
